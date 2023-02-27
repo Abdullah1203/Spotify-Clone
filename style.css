@@ -5,14 +5,13 @@ margin: 0;
 padding: 0;
 }
 body{
-    background-color: antiquewhite;
+    background-color: #0a0a0a;
     font-family: 'Varela Round', sans-serif;
-    background-image: url('bg.jpg');
     
 }
 .brand img{
-    width: 114px;
-    padding: 0px 8px;
+    width: 55px;
+    padding: 0px 12px;
 }
 nav{
     font-family: 'Ubuntu', sans-serif;
@@ -32,6 +31,15 @@ nav ul li{
     display: flex;
     align-items: center;
 }
+.selected {
+    border: 2px solid #77af7b;
+    border-radius: 32%;
+    color: #77af7b;
+    padding: 6px 13px;
+    text-align: center;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
 .container{
     min-height: 72vh;
     background-color: #000;
@@ -43,36 +51,44 @@ nav ul li{
     border-radius: 12px;
     padding: 34px;
     background-image: url('bg.jpg');
+    padding-bottom: 130px;
 }
 .bottom{
-     position: fixed;
-     left:0
-     bottom: 0;
-     width: 100%;
-     height: 130px;
-     background-color: #111111;
-     opacity : 90%;
-     color: white;
-     bottom: 0;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     overflow: hidden;
+    position: fixed;
+    left:0
+    bottom: 0;
+    width: 100%;
+    height: 130px;
+    background-color: #111111;
+    opacity : 90%;
+    color: white;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 #myProgressBar{
     width: 80%;
     cursor: pointer;
 }
+
 .songItemContainer{
     margin-top: 74px;
 } 
 .icons{
     margin-top: 14px;
+    overflow: hidden;
 }
 .icons i{
     cursor: pointer;
+    padding: 5px;
+
+}
+.fa-2x:hover{
+    color: #22b656;
 }
 .songItem{
     height: 50px;
@@ -97,15 +113,62 @@ nav ul li{
     cursor: pointer;
 }
 .songInfo{
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
     position: absolute;
-    left: 10vw;
+    left: 0;
+    width: 40%;
+    padding-left: 10%;
     font-family: 'Varela Round', sans-serif;
 
+}
+#currentSongName{
+ padding-left: 6px;
+}
+.divider{
+    display: flex;
 }
 .songInfo img{
     opacity: 0;
     transition: opacity 0.3s ease-in;
 }
 
+
+
 /* footer */
 
+input[type="range"] {
+  -webkit-appearance: none;
+  margin-right: 15px;
+  width: 200px;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  background-image: linear-gradient(#22b656, #30c564);
+  background-repeat: no-repeat;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #22b656;
+  cursor: ew-resize;
+ 
+}
+li a{
+    color: #22b656 ;
+    text-decoration: none;
+    font-weight: 500;
+    
+}
+.unselectable {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+  }
