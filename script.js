@@ -1,4 +1,3 @@
-
 console.log("Welcome to spotify clone built by ABD NIMIT");
 
 //Initialize the variables
@@ -12,11 +11,11 @@ let songItems = Array.from(document.getElementsByClassName('songItem'));
 
 
 let songs = [
-    {songName: "Warriyo - Mortals (feat.pp)" , filePath: "song/1.mp3", coverPath: "covers/1.jpg"},
-    {songName: "song2" , filePath: "song/2.mp3", coverPath: "covers/2.jpg"},
-    {songName: "song3" , filePath: "song/3.mp3", coverPath: "covers/3.jpg"},
-    {songName: "song4" , filePath: "song/4.mp3", coverPath: "covers/4.jpg"},
-    {songName: "song5" , filePath: "song/5.mp3", coverPath: "covers/5.jpg"},
+    {songName: "Iraaday - Abdul Hannan & Rovalio" , filePath: "song/1.mp3", coverPath: "covers/1.jpg"},
+    {songName: "The Weeknd - Call Out My Name" , filePath: "song/2.mp3", coverPath: "covers/2.jpg"},
+    {songName: "Twenty one pilots- Stressed Out" , filePath: "song/3.mp3", coverPath: "covers/3.jpg"},
+    {songName: "The Chainsmokers - Young (Lyric)" , filePath: "song/4.mp3", coverPath: "covers/4.jpg"},
+    {songName: "Gotye - Somebody That I Used To Know" , filePath: "song/5.mp3", coverPath: "covers/5.jpg"},
     {songName: "song6" , filePath: "song/6.mp3", coverPath: "covers/6.jpg"},
     {songName: "song7" , filePath: "song/7.mp3", coverPath: "covers/7.jpg"},
     {songName: "song8" , filePath: "song/8.mp3", coverPath: "covers/8.jpg"},
@@ -67,14 +66,46 @@ const makeAllPlays = ()=>{
 Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
     element.addEventListener('click', (e)=>{
         makeAllPlays();
-        index = parseInt(e.target.id);
+        songIndex = parseInt(e.target.id);
         e.target.classList.remove("fa-play-circle");
         e.target.classList.add("fa-pause-circle");
-        audioElement.src = `song/${index+1}.mp3`;
+        audioElement.src = `song/${songIndex+1}.mp3`;
         audioElement.currenTime = 0;
         audioElement.play();
         masterPlay.classList.remove('fa-play-circle');
         masterPlay.classList.add('fa-pause-circle');
 
     })
+})
+
+document.getElementById('next').addEventListener('click', ()=>{
+    if(songIndex>=9)
+    {
+        songIndex = 0;
+    }
+    else
+    {
+        songIndex += 1;
+    }
+    audioElement.src = `song/${songIndex+1}.mp3`;
+    audioElement.currenTime = 0;
+    audioElement.play();
+    masterPlay.classList.remove('fa-play-circle');
+    masterPlay.classList.add('fa-pause-circle');
+})
+
+document.getElementById('previous').addEventListener('click', ()=>{
+    if(songIndex<=0)
+    {
+        songIndex = 0;
+    }
+    else
+    {
+        songIndex -= 1;
+    }
+    audioElement.src = `song/${songIndex+1}.mp3`;
+    audioElement.currenTime = 0;
+    audioElement.play();
+    masterPlay.classList.remove('fa-play-circle');
+    masterPlay.classList.add('fa-pause-circle');
 })
