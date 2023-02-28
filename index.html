@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
-    <title>Spotify - Your favourite songs are here</title>
+    <title>Spotify - Music Player</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,70 +26,83 @@
                 <div class="songItem">
                     <img src="covers/1.jpg" alt="1">
                     <span class="songName"> love you</span>
-                    <span class="songlistplay"><span class="timestamp">05:34<i id="0" class="far songItemPlay fa-play-circle"></i></span></span>
+                    <span class="songlistplay"><span class="timestamp">02:13<i id="0" class="far songItemPlay fa-play-circle"></i></span></span>
                 </div>
                 <div class="songItem">
                     <img src="covers/2.jpg" alt="1">
                     <span class="songName"> love you</span>
-                    <span class="songlistplay"><span class="timestamp">05:34<i id="1" class="far songItemPlay fa-play-circle"></i></span></span>
+                    <span class="songlistplay"><span class="timestamp">03:23<i id="1" class="far songItemPlay fa-play-circle"></i></span></span>
                 </div>
                 <div class="songItem">
                     <img src="covers/3.jpg" alt="1">
                     <span class="songName"> love you</span>
-                    <span class="songlistplay"><span class="timestamp">05:34<i id="2" class="far songItemPlay fa-play-circle"></i></span></span>
+                    <span class="songlistplay"><span class="timestamp">03:45<i id="2" class="far songItemPlay fa-play-circle"></i></span></span>
                 </div>
                 <div class="songItem">
                     <img src="covers/4.jpg" alt="1">
                     <span class="songName"> love you</span>
-                    <span class="songlistplay"><span class="timestamp">05:34<i id="3" class="far songItemPlay fa-play-circle"></i></span></span>
+                    <span class="songlistplay"><span class="timestamp">03:44<i id="3" class="far songItemPlay fa-play-circle"></i></span></span>
                 </div>
                 <div class="songItem">
                     <img src="covers/5.jpg" alt="1">
                     <span class="songName"> love you</span>
-                    <span class="songlistplay"><span class="timestamp">05:34<i id="4" class="far songItemPlay fa-play-circle"></i></span></span>
+                    <span class="songlistplay"><span class="timestamp">04:03<i id="4" class="far songItemPlay fa-play-circle"></i></span></span>
                 </div>
                 <div class="songItem">
                     <img src="covers/6.jpg" alt="1">
                     <span class="songName"> love you</span>
-                    <span class="songlistplay"><span class="timestamp">05:34<i id="5" class="far songItemPlay fa-play-circle"></i></span></span>
+                    <span class="songlistplay"><span class="timestamp">05:23<i id="5" class="far songItemPlay fa-play-circle"></i></span></span>
                 </div>
                 <div class="songItem">
                     <img src="covers/7.jpg" alt="1">
                     <span class="songName"> love you</span>
-                    <span class="songlistplay"><span class="timestamp">05:34<i id="6" class="far songItemPlay fa-play-circle"></i></span></span>
+                    <span class="songlistplay"><span class="timestamp">02:58<i id="6" class="far songItemPlay fa-play-circle"></i></span></span>
                 </div>
                 <div class="songItem">
                     <img src="covers/8.jpg" alt="1">
                     <span class="songName"> love you</span>
-                    <span class="songlistplay"><span class="timestamp">05:34<i id="7" class="far songItemPlay fa-play-circle"></i></span></span>
+                    <span class="songlistplay"><span class="timestamp">02:23<i id="7" class="far songItemPlay fa-play-circle"></i></span></span>
                 </div>
                 <div class="songItem">
                     <img src="covers/9.jpg" alt="1">
                     <span class="songName"> love you</span>
-                    <span class="songlistplay"><span class="timestamp">05:34<i id="8" class="far songItemPlay fa-play-circle"></i></span></span>
+                    <span class="songlistplay"><span class="timestamp">03:59<i id="8" class="far songItemPlay fa-play-circle"></i></span></span>
                 </div>
                 <div class="songItem">
                     <img src="covers/10.jpg" alt="1">
                     <span class="songName"> love you</span>
-                    <span class="songlistplay"><span class="timestamp">05:34<i id="9" class="far songItemPlay fa-play-circle"></i></span></span>
+                    <span class="songlistplay"><span class="timestamp ">02:56<i id="9" class="far songItemPlay fa-play-circle"></i></span></span>
                 </div>
             </div>
         </div>
         <div class="songBanner"></div>
     </div>
+        
     <div class="bottom">
-        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
-        <div class="divider unselectable">
-        <div class="icons">
-            <i class="fas fa-2x fa-step-backward" id="previous"></i>
-            <i class="fas fa-2x fa-circle-play" id="masterPlay"></i>
-            <i class="fas fa-2x fa-step-forward" id="next"></i>
+        <div class="container1">
+            <span id="Audio_passedTime">00:00</span>
+            <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+            <span id="Audio_durationTime">00:00</span>
         </div>
-        <div class="songInfo">
-            <img src="playing.gif" alt="" width="42px" id="gif">
-            <span id="currentSongName">Iraaday - Abdul Hannan & Rovalio</span>
+        <div class="container2 songInfo unselectable">
+            <div class="left-pane">
+                <img src="covers/1.jpg" alt="Song Cover" width="42px" id="cover">
+                <span id="currentSongName">Iraaday - Abdul Hannan & Rovalio</span>
+                <i class="fa-sharp fa-regular fa-heart" id="favourite" onclick="toogleLove(this)"></i>
+            </div>
+            <div class="center-pane">
+                <div class="icons">
+                    <i class="fas fa-2x fa-step-backward" id="previous"></i>
+                    <i class="fas fa-2x fa-circle-play" id="masterPlay"></i>
+                    <i class="fas fa-2x fa-step-forward" id="next"></i>
+                </div>
+            </div>
+            <div class="right-pane">
+                <img src="playing.gif" alt="" width="42px" id="gif">
+                <i class="fa fa-light fa-volume-high" id="mute" ></i>
+                <input type="range" class="volumeBar" id="volume-slider" value="100">
+            </div>
         </div>
-    </div>
     </div>
 
 

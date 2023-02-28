@@ -55,40 +55,76 @@ nav ul li{
 }
 .bottom{
     position: fixed;
-    left:0
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
     height: 130px;
     background-color: #111111;
-    opacity : 90%;
+    opacity : 95%;
     color: white;
     bottom: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+}
+.container1{
+    display: flex;
+    height: 70px;
     align-items: center;
-    overflow: hidden;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 18px;
+    font-size: 12px;
+    color: #e2e2e2d8;
+}
+.container2{
+    padding: 0 10%;
+    display: flex;
+    height: 70px;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.left-pane{
+    width: 35%;
+    display: flex;
+    align-items: center;
+}
+.center-pane{
+    width: 30%;
+    text-align: center;
+    justify-content: center;
+}
+.right-pane{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.center-pane .icons i{
+    padding: 0 5px;
 }
 
 #myProgressBar{
-    width: 80%;
+    margin: 0 10px;
+    width: 70%;
     cursor: pointer;
 }
 
 .songItemContainer{
     margin-top: 74px;
 } 
-.icons{
-    margin-top: 14px;
-    overflow: hidden;
-}
-.icons i{
-    cursor: pointer;
-    padding: 5px;
 
-}
 .fa-2x:hover{
     color: #22b656;
+}
+.fa-heart{
+    margin-left: 10px;
+    font-size: 18px;
+    color: rgb(228, 62, 98);
+}
+.fa-heart:hover{
+    color: rgb(255, 103, 136);
+    font-size: 20px;
+    transition: font-size 0.1s ease-in;
 }
 .songItem{
     height: 50px;
@@ -113,49 +149,49 @@ nav ul li{
     cursor: pointer;
 }
 .songInfo{
-    margin-top: 14px;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: 0;
-    width: 40%;
-    padding-left: 10%;
     font-family: 'Varela Round', sans-serif;
-
 }
 #currentSongName{
- padding-left: 6px;
+ padding-left: 10px;
 }
-.divider{
-    display: flex;
-}
-.songInfo img{
+
+#gif{
     opacity: 0;
     transition: opacity 0.3s ease-in;
 }
-
+.volumeBar{
+    width: 72px;
+}
+#mute{
+    padding: 0px 15px;
+}
 
 
 /* footer */
 
 input[type="range"] {
+  overflow: hidden;
   -webkit-appearance: none;
   margin-right: 15px;
-  width: 200px;
   height: 7px;
-  background: rgba(255, 255, 255, 0.6);
+  background-color: rgba(121, 121, 121, 0.6);
   border-radius: 5px;
-  background-image: linear-gradient(#22b656, #30c564);
+  background-image: linear-gradient(##5e5e5e, ##5e5e5e);
   background-repeat: no-repeat;
 }
-
+input:focus {
+    box-shadow: none;
+    outline: none;
+  }
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  height: 18px;
-  width: 18px;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
-  background: #22b656;
-  cursor: ew-resize;
+  background: #ffffff;
+  cursor: pointer;
+  box-shadow: -1000px 0 0 995px #22b656;
+  -webkit-user-select: none;
  
 }
 li a{
