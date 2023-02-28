@@ -165,7 +165,11 @@ nav ul li{
 #mute{
     padding: 0px 15px;
 }
-
+.songlistplay{
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
 
 /* footer */
 
@@ -206,5 +210,67 @@ li a{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+@media only screen and (max-width: 650px) {
+    /* For mobile phones: */
+    .songItemPlay{
+        padding-left: 2%;
+    }
+    #currentSongName{
+        font-size: 12px;
+    }
+    .center-pane .icons i{
+        font-size: 24px;
 
+    }
+    .songName{
+        display: flex;
+        font-size: 12px;
+    }
+    #gif{
+        width: 20%;
+    }
+    #mute{
+        font-size: 12px;
+        padding: 4px;
+    }
+    .timestamp{
+        font-size: 12px;
+    }
+}
+  @media only screen and (max-width: 520px) {
+    /* For mobile phones: */
+    #currentSongName{
+        font-size: 10px;
+    }
+    #gif{
+        display: none;
+    }
+    #favourite{
+        display: none;
+    }
   }
+
+  @media only screen and (max-width: 420px) {
+
+    /* For mobile phones: */
+    .center-pane .icons i{
+        font-size: 20px;
+        padding: 2%;
+
+    }
+    #cover{
+        width: 20%;
+    }
+    #currentSongName{
+        font-size: 10px;
+    }
+    nav ul li{
+        display: none;
+    }
+    nav ul{
+        padding: 0%;
+        justify-content: center;
+    }
+
+}
